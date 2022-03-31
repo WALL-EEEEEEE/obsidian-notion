@@ -22,6 +22,6 @@
 		"typescript": "4.4.4"
 	},
 	"dependencies": {
-		"@notionhq/client": "^1.0.4"
+		"notion-api-js": "^2.4.0"
 	}
 }
