@@ -1,6 +1,6 @@
 import { App, Editor, MarkdownView, Modal, Notice, Plugin, PluginSettingTab, Setting} from 'obsidian';
 import { addIcon } from 'obsidian';
-import Notion from "Notion";
+import Notion from "notion";
 
 
 // Remember to rename these classes and interfaces!
@@ -26,6 +26,7 @@ export default class NotionPlugin extends Plugin {
 		// This creates an icon in the left ribbon.
 		const ribbonIconEl = this.addRibbonIcon('Notion', 'Notion', async (evt: MouseEvent) => {
 			// Called when the user clicks the icon.
+			this.initNotion()
 			await this.notion.getAllDatabase()
 		});
 		// Perform additional things with the ribbon
